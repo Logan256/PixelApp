@@ -12,59 +12,55 @@
 		022897952DC319B800EEC866 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897942DC319B800EEC866 /* Item.swift */; };
 		022897972DC319B900EEC866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022897962DC319B900EEC866 /* Assets.xcassets */; };
 		0228979B2DC319B900EEC866 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0228979A2DC319B900EEC866 /* Preview Assets.xcassets */; };
-		022897A52DC319B900EEC866 /* PixelAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897A42DC319B900EEC866 /* PixelAppTests.swift */; };
-		022897AF2DC319B900EEC866 /* PixelAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897AE2DC319B900EEC866 /* PixelAppUITests.swift */; };
-		022897B12DC319B900EEC866 /* PixelAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897B02DC319B900EEC866 /* PixelAppUITestsLaunchTests.swift */; };
+		022897BF2DC31BEE00EEC866 /* GalleryMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897BE2DC31BEE00EEC866 /* GalleryMainView.swift */; };
+		022897C52DC31C2800EEC866 /* SettingsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897C42DC31C2800EEC866 /* SettingsMainView.swift */; };
+		022897C92DC31C3200EEC866 /* CanvasMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897C82DC31C3100EEC866 /* CanvasMainView.swift */; };
+		022897CD2DC31C5700EEC866 /* GalleryTilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897CC2DC31C5700EEC866 /* GalleryTilesView.swift */; };
+		022897D32DC31C7200EEC866 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897D22DC31C7200EEC866 /* Controller.swift */; };
+		022897D72DC31C7A00EEC866 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897D62DC31C7A00EEC866 /* Drawing.swift */; };
+		022897DB2DC815F300EEC866 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897DA2DC815F300EEC866 /* ColorPickerView.swift */; };
+		022897DD2DC8161F00EEC866 /* ColorSlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897DC2DC8161F00EEC866 /* ColorSlidersView.swift */; };
+		022897DF2DC831DB00EEC866 /* BitmapTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897DE2DC831DB00EEC866 /* BitmapTest.swift */; };
+		022897E12DC847F300EEC866 /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897E02DC847F300EEC866 /* Layer.swift */; };
+		022897EE2DC93F5100EEC866 /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897ED2DC93F5100EEC866 /* Toolbar.swift */; };
+		022897F02DC94CB000EEC866 /* VerticleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897EF2DC94CB000EEC866 /* VerticleSlider.swift */; };
+		022897F22DC9530800EEC866 /* DrawingCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897F12DC9530800EEC866 /* DrawingCanvasView.swift */; };
+		022897F62DC9C04400EEC866 /* BrushPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897F52DC9C04400EEC866 /* BrushPickerView.swift */; };
+		022897F82DC9C04E00EEC866 /* LayerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897F72DC9C04E00EEC866 /* LayerPickerView.swift */; };
+		022897FA2DCA65B600EEC866 /* Brush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897F92DCA65B600EEC866 /* Brush.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		022897A12DC319B900EEC866 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 022897852DC319B800EEC866 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0228978C2DC319B800EEC866;
-			remoteInfo = PixelApp;
-		};
-		022897AB2DC319B900EEC866 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 022897852DC319B800EEC866 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0228978C2DC319B800EEC866;
-			remoteInfo = PixelApp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0228978D2DC319B800EEC866 /* PixelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		022897902DC319B800EEC866 /* PixelAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelAppApp.swift; sourceTree = "<group>"; };
-		022897922DC319B800EEC866 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		022897922DC319B800EEC866 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = PixelApp/ContentView.swift; sourceTree = SOURCE_ROOT; };
 		022897942DC319B800EEC866 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		022897962DC319B900EEC866 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		022897982DC319B900EEC866 /* PixelApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PixelApp.entitlements; sourceTree = "<group>"; };
 		0228979A2DC319B900EEC866 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		022897A02DC319B900EEC866 /* PixelAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixelAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		022897A42DC319B900EEC866 /* PixelAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelAppTests.swift; sourceTree = "<group>"; };
-		022897AA2DC319B900EEC866 /* PixelAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixelAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		022897AE2DC319B900EEC866 /* PixelAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelAppUITests.swift; sourceTree = "<group>"; };
 		022897B02DC319B900EEC866 /* PixelAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		022897BE2DC31BEE00EEC866 /* GalleryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryMainView.swift; sourceTree = "<group>"; };
+		022897C42DC31C2800EEC866 /* SettingsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMainView.swift; sourceTree = "<group>"; };
+		022897C82DC31C3100EEC866 /* CanvasMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasMainView.swift; sourceTree = "<group>"; };
+		022897CC2DC31C5700EEC866 /* GalleryTilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTilesView.swift; sourceTree = "<group>"; };
+		022897D22DC31C7200EEC866 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Controller.swift; path = PixelApp/Controller/Controller.swift; sourceTree = SOURCE_ROOT; };
+		022897D62DC31C7A00EEC866 /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Drawing.swift; path = PixelApp/Model/Drawing.swift; sourceTree = SOURCE_ROOT; };
+		022897DA2DC815F300EEC866 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		022897DC2DC8161F00EEC866 /* ColorSlidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlidersView.swift; sourceTree = "<group>"; };
+		022897DE2DC831DB00EEC866 /* BitmapTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmapTest.swift; sourceTree = "<group>"; };
+		022897E02DC847F300EEC866 /* Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Layer.swift; path = PixelApp/Model/Layer.swift; sourceTree = SOURCE_ROOT; };
+		022897ED2DC93F5100EEC866 /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
+		022897EF2DC94CB000EEC866 /* VerticleSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticleSlider.swift; sourceTree = "<group>"; };
+		022897F12DC9530800EEC866 /* DrawingCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvasView.swift; sourceTree = "<group>"; };
+		022897F52DC9C04400EEC866 /* BrushPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushPickerView.swift; sourceTree = "<group>"; };
+		022897F72DC9C04E00EEC866 /* LayerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerPickerView.swift; sourceTree = "<group>"; };
+		022897F92DCA65B600EEC866 /* Brush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brush.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0228978A2DC319B800EEC866 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0228979D2DC319B900EEC866 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		022897A72DC319B900EEC866 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -88,8 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				0228978D2DC319B800EEC866 /* PixelApp.app */,
-				022897A02DC319B900EEC866 /* PixelAppTests.xctest */,
-				022897AA2DC319B900EEC866 /* PixelAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +91,13 @@
 		0228978F2DC319B800EEC866 /* PixelApp */ = {
 			isa = PBXGroup;
 			children = (
+				022897EA2DC93F3900EEC866 /* ToolItems */,
+				022897E22DC8571100EEC866 /* Examples */,
+				022897D12DC31C6700EEC866 /* Model */,
+				022897D02DC31C5F00EEC866 /* Controller */,
+				022897C32DC31C1B00EEC866 /* SettingsView */,
+				022897C22DC31C1300EEC866 /* CanvasView */,
+				022897BD2DC31BC900EEC866 /* GalleryView */,
 				022897902DC319B800EEC866 /* PixelAppApp.swift */,
 				022897922DC319B800EEC866 /* ContentView.swift */,
 				022897942DC319B800EEC866 /* Item.swift */,
@@ -132,6 +133,71 @@
 			path = PixelAppUITests;
 			sourceTree = "<group>";
 		};
+		022897BD2DC31BC900EEC866 /* GalleryView */ = {
+			isa = PBXGroup;
+			children = (
+				022897BE2DC31BEE00EEC866 /* GalleryMainView.swift */,
+				022897CC2DC31C5700EEC866 /* GalleryTilesView.swift */,
+			);
+			path = GalleryView;
+			sourceTree = "<group>";
+		};
+		022897C22DC31C1300EEC866 /* CanvasView */ = {
+			isa = PBXGroup;
+			children = (
+				022897C82DC31C3100EEC866 /* CanvasMainView.swift */,
+				022897DA2DC815F300EEC866 /* ColorPickerView.swift */,
+				022897DC2DC8161F00EEC866 /* ColorSlidersView.swift */,
+				022897F12DC9530800EEC866 /* DrawingCanvasView.swift */,
+				022897F52DC9C04400EEC866 /* BrushPickerView.swift */,
+				022897F72DC9C04E00EEC866 /* LayerPickerView.swift */,
+			);
+			path = CanvasView;
+			sourceTree = "<group>";
+		};
+		022897C32DC31C1B00EEC866 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				022897C42DC31C2800EEC866 /* SettingsMainView.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		022897D02DC31C5F00EEC866 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				022897D22DC31C7200EEC866 /* Controller.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		022897D12DC31C6700EEC866 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				022897D62DC31C7A00EEC866 /* Drawing.swift */,
+				022897E02DC847F300EEC866 /* Layer.swift */,
+				022897F92DCA65B600EEC866 /* Brush.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		022897E22DC8571100EEC866 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				022897DE2DC831DB00EEC866 /* BitmapTest.swift */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		022897EA2DC93F3900EEC866 /* ToolItems */ = {
+			isa = PBXGroup;
+			children = (
+				022897ED2DC93F5100EEC866 /* Toolbar.swift */,
+				022897EF2DC94CB000EEC866 /* VerticleSlider.swift */,
+			);
+			path = ToolItems;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,42 +218,6 @@
 			productReference = 0228978D2DC319B800EEC866 /* PixelApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0228979F2DC319B900EEC866 /* PixelAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 022897B72DC319B900EEC866 /* Build configuration list for PBXNativeTarget "PixelAppTests" */;
-			buildPhases = (
-				0228979C2DC319B900EEC866 /* Sources */,
-				0228979D2DC319B900EEC866 /* Frameworks */,
-				0228979E2DC319B900EEC866 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				022897A22DC319B900EEC866 /* PBXTargetDependency */,
-			);
-			name = PixelAppTests;
-			productName = PixelAppTests;
-			productReference = 022897A02DC319B900EEC866 /* PixelAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		022897A92DC319B900EEC866 /* PixelAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 022897BA2DC319B900EEC866 /* Build configuration list for PBXNativeTarget "PixelAppUITests" */;
-			buildPhases = (
-				022897A62DC319B900EEC866 /* Sources */,
-				022897A72DC319B900EEC866 /* Frameworks */,
-				022897A82DC319B900EEC866 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				022897AC2DC319B900EEC866 /* PBXTargetDependency */,
-			);
-			name = PixelAppUITests;
-			productName = PixelAppUITests;
-			productReference = 022897AA2DC319B900EEC866 /* PixelAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,14 +230,6 @@
 				TargetAttributes = {
 					0228978C2DC319B800EEC866 = {
 						CreatedOnToolsVersion = 15.4;
-					};
-					0228979F2DC319B900EEC866 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 0228978C2DC319B800EEC866;
-					};
-					022897A92DC319B900EEC866 = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 0228978C2DC319B800EEC866;
 					};
 				};
 			};
@@ -225,8 +247,6 @@
 			projectRoot = "";
 			targets = (
 				0228978C2DC319B800EEC866 /* PixelApp */,
-				0228979F2DC319B900EEC866 /* PixelAppTests */,
-				022897A92DC319B900EEC866 /* PixelAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -241,20 +261,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0228979E2DC319B900EEC866 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		022897A82DC319B900EEC866 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -262,43 +268,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				022897CD2DC31C5700EEC866 /* GalleryTilesView.swift in Sources */,
+				022897D72DC31C7A00EEC866 /* Drawing.swift in Sources */,
+				022897BF2DC31BEE00EEC866 /* GalleryMainView.swift in Sources */,
+				022897DD2DC8161F00EEC866 /* ColorSlidersView.swift in Sources */,
+				022897F62DC9C04400EEC866 /* BrushPickerView.swift in Sources */,
+				022897F02DC94CB000EEC866 /* VerticleSlider.swift in Sources */,
+				022897F22DC9530800EEC866 /* DrawingCanvasView.swift in Sources */,
 				022897932DC319B800EEC866 /* ContentView.swift in Sources */,
 				022897952DC319B800EEC866 /* Item.swift in Sources */,
+				022897C92DC31C3200EEC866 /* CanvasMainView.swift in Sources */,
+				022897FA2DCA65B600EEC866 /* Brush.swift in Sources */,
+				022897EE2DC93F5100EEC866 /* Toolbar.swift in Sources */,
+				022897F82DC9C04E00EEC866 /* LayerPickerView.swift in Sources */,
+				022897C52DC31C2800EEC866 /* SettingsMainView.swift in Sources */,
+				022897DF2DC831DB00EEC866 /* BitmapTest.swift in Sources */,
+				022897DB2DC815F300EEC866 /* ColorPickerView.swift in Sources */,
+				022897E12DC847F300EEC866 /* Layer.swift in Sources */,
 				022897912DC319B800EEC866 /* PixelAppApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0228979C2DC319B900EEC866 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				022897A52DC319B900EEC866 /* PixelAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		022897A62DC319B900EEC866 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				022897B12DC319B900EEC866 /* PixelAppUITestsLaunchTests.swift in Sources */,
-				022897AF2DC319B900EEC866 /* PixelAppUITests.swift in Sources */,
+				022897D32DC31C7200EEC866 /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		022897A22DC319B900EEC866 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0228978C2DC319B800EEC866 /* PixelApp */;
-			targetProxy = 022897A12DC319B900EEC866 /* PBXContainerItemProxy */;
-		};
-		022897AC2DC319B900EEC866 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0228978C2DC319B800EEC866 /* PixelApp */;
-			targetProxy = 022897AB2DC319B900EEC866 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		022897B22DC319B900EEC866 /* Debug */ = {
@@ -487,92 +479,6 @@
 			};
 			name = Release;
 		};
-		022897B82DC319B900EEC866 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = logan.PixelAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PixelApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PixelApp";
-			};
-			name = Debug;
-		};
-		022897B92DC319B900EEC866 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = logan.PixelAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PixelApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PixelApp";
-			};
-			name = Release;
-		};
-		022897BB2DC319B900EEC866 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = logan.PixelAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PixelApp;
-			};
-			name = Debug;
-		};
-		022897BC2DC319B900EEC866 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = logan.PixelAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PixelApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -590,24 +496,6 @@
 			buildConfigurations = (
 				022897B52DC319B900EEC866 /* Debug */,
 				022897B62DC319B900EEC866 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		022897B72DC319B900EEC866 /* Build configuration list for PBXNativeTarget "PixelAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				022897B82DC319B900EEC866 /* Debug */,
-				022897B92DC319B900EEC866 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		022897BA2DC319B900EEC866 /* Build configuration list for PBXNativeTarget "PixelAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				022897BB2DC319B900EEC866 /* Debug */,
-				022897BC2DC319B900EEC866 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
