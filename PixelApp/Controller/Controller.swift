@@ -20,6 +20,8 @@ class Controller: ObservableObject {
     @Published var currentOpacity: Double
     @Published var currentBrushSize: Double
     
+    var drawings_list: [String]
+    
     private var layer: Layer {
         get {
             drawing.layers[currentLayer]
@@ -41,6 +43,7 @@ class Controller: ObservableObject {
         self.currentBrush = ""
         self.currentOpacity = 1
         self.currentBrushSize = 1
+        self.drawings_list = []
     }
     
     func addLayer() {
@@ -90,6 +93,29 @@ class Controller: ObservableObject {
             print("Saved to \(url)")
         } catch {
             print("Failed to save: \(error)")
+        }
+    }
+    
+    private func loadFileList() -> [String] {
+        let filename = "drawings_list.json"
+        let url = getDocumentsDirectory().appendingPathComponent(filename)
+        if let data = try? Data(contentsOf: url),
+        let drawings_list = try? JSONDecoder().decode([String].self, from: data) {
+            return drawings_list
+        } else {
+            print("Error when loading drawings list!")
+            return []
+        }
+    }
+    
+    private func saveFileList(drawings_list: [String]) -> Void {
+        let filename = "drawings_list.json"
+        let url = getDocumentsDirectory().appendingPathComponent(filename)
+        
+        if let data = try? JSONEncoder().encode(drawings_list) {
+            try? data.write(to: url)
+        } else {
+            print("Error when saving drawings list!")
         }
     }
 }
