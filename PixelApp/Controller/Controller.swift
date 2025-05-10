@@ -65,11 +65,45 @@ class Controller: ObservableObject {
         // brushes can be organized into sets and it gets that set
     }
     
-    func loadDrawing() {
+    func loadDrawing(filename: String) -> Drawing? {
+        let url = getDocumentsDirectory().appendingPathComponent(filename)
         
+        do {
+            let data = try Data(contentsOf: url)
+            let drawing = try JSONDecoder().decode(Drawing.self, from: data)
+            return drawing
+        } catch {
+            print("Failed to load: \(error)")
+            return nil
+        }
     }
     
-    func saveDrawing() {
+    func saveDrawing(drawing: Drawing) -> Void {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        let filename = generateUniqueFilename()
         
+        do {
+            let data = try encoder.encode(drawing)
+            let url = getDocumentsDirectory().appendingPathComponent(filename)
+            try data.write(to: url)
+            print("Saved to \(url)")
+        } catch {
+            print("Failed to save: \(error)")
+        }
+    }
+}
+
+extension Controller {
+    
+    private func getDocumentsDirectory() -> URL {
+        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    }
+    
+    private func generateUniqueFilename(prefix: String = "Drawing") -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyMMdd_HHmmss"
+        let timestamp = dateFormatter.string(from: Date())
+        return "\(prefix)_\(timestamp)"
     }
 }
