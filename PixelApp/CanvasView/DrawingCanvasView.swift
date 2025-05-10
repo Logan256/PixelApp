@@ -33,7 +33,7 @@ struct DrawingCanvasView: View {
                         HStack(spacing: 0) {
                             ForEach(0..<currentLayer.width, id: \.self) { col in
                                 Rectangle()
-                                    .fill(currentLayer.values[row][col])
+                                    .fill(currentLayer.values[row][col].color)
                                     .frame(width: cellSize, height: cellSize)
                                     .border(Color.gray)
                                     .contentShape(Rectangle()) // makes the whole cell tappable

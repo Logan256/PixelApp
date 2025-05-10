@@ -50,11 +50,11 @@ class Controller: ObservableObject {
     
     // column = width, row = height
     func drawPixel(row: Int, column: Int) {
-        self.layer.values[row][column] = currentColor
+        self.layer.values[row][column] = ColorData(color: currentColor)
     }
     
     func erasePixel(row: Int, column: Int) {
-        self.layer.values[row][column] = Color.clear
+        self.layer.values[row][column] = ColorData(color: Color.clear)
     }
     
     func setCurrentColor(color: Color) {
