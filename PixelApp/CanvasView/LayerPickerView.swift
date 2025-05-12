@@ -9,45 +9,95 @@ import SwiftUI
 
 // TODO: Fix this to be better!
 struct LayerPicker: View {
-    @Binding var layers: [Layer]
-    @Binding var currentLayer: Int
+    @Binding var layers: [Layer] // taken from controller
+    @Binding var currentLayer: Layer // taken from controller
+    // frame size and stuff:
+    
+    let height = UIViewController().view.frame.height / 3
+    let width = UIViewController().view.frame.width / 3
+    
+    var selectLayer: (Int) -> Void
+    var deleteLayer: (Int) -> Void
+    var addLayer: (Int) -> Void // add above current layer
     
     var body: some View {
-        ScrollView {
-            ForEach(layers) { layer in
-                Button(action: {
-                    // callback to controller
+        VStack {
+            ZStack {
+                Rectangle()
+                    .fill(Color.gray.opacity(0.5)) // when selected
+                HStack {
                     
-                }) {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.gray)
-                        
-                        HStack(spacing: 8) {
+                    
+                    Button(action: {
+                        // add new layer above current layer
+                    }) {
+                        Image(systemName: "plus")
+                    }
+                    
+                    Spacer()
+
+                    Text("Layers")
+                }
+                .padding(.horizontal)
+                
+            }
+            .frame(width: width, height: 40)
+            
+            ScrollView {
+                ForEach(layers) { layer in
+                    Button(action: {
+                        // callback to controller to open associated file
+                    }) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(currentLayer == layer ? Color.blue.opacity(0.5) : Color.gray.opacity(0.5)) // when selected
                             
-                            // Brush Icon
-                            RoundedRectangle(cornerRadius: 8)
-                                .fill(Color.white)
-                                .frame(width: 60, height: 60)
-                                .overlay(
-                                    Text("Hello") // Replace with a preview image or shape
-                                        .font(.largeTitle)
-                                )
-                            
-                            Spacer()
-                            
-                            // Brush Name
-                            Text(layer.name)
-                                .font(.caption)
-                                .foregroundColor(.primary)
+                            HStack(spacing: 8) {
+                                
+                                // Brush Icon
+                                RoundedRectangle(cornerRadius: 8)
+                                    .fill(Color.white)
+                                    .frame(width: 50, height: 50)
+                                    .overlay(
+                                        Text("Hello") // Replace with a preview image or shape
+                                            .font(.largeTitle)
+                                    )
+                                
+                                // Brush Name
+                                Text(layer.name)
+                                    .font(.caption)
+                                    .foregroundColor(.primary)
+                                
+                                Spacer()
+                                
+                                Image(systemName: layer.hidden ? "eye.slash" :"eye")
+                                Image(systemName: layer.locked ? "lock" : "lock.open")
+                            }
+                            .padding()
+                            .cornerRadius(12)
                         }
-                        .padding() // Selected Brush Indicator
-                        //                    .background(selectedBrush?.id == brush.id ? Color.blue.opacity(0.2) : Color.clear) When selected
-                        .cornerRadius(12)
+                    }
+                    .swipeActions { // swipe action
+                        Button(role: .destructive) {
+                            if let index = layers.firstIndex(of: layer) {
+                                layers.remove(at: index)
+                            }
+                        } label: {
+                            Label("Delete", systemImage: "trash")
+                        }
                     }
                 }
             }
+            
+            HStack {
+                Rectangle()
+                    .fill(Color.gray.opacity(0.5))
+            }
+            .frame(height: 30)
         }
+        .frame(width: width, height: height)
+        .background(Color.gray.opacity(0.2))
+        .clipShape(RoundedRectangle(cornerRadius: 20))
     }
 }
 
@@ -64,7 +114,19 @@ struct DraggableLayerPicker: View {
                 .fill(.white)
             
             VStack(spacing: 20) {
-                LayerPicker(layers: $layers, currentLayer: $currentLayer)
+                LayerPicker(
+                    layers: $layers,
+                    currentLayer: $layers[currentLayer],
+                    selectLayer: { _ in
+                        // select current layer
+                    },
+                    deleteLayer: { _ in
+                        // select current layer
+                    },
+                    addLayer: { _ in
+                        // select current layer
+                    }
+                )
                 
                 Image(systemName: "line.3.horizontal")
                     .font(.title)
