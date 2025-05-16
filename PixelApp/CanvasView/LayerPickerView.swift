@@ -16,9 +16,15 @@ struct LayerPicker: View {
     let height = UIViewController().view.frame.height / 3
     let width = UIViewController().view.frame.width / 3
     
+    // Layer operations
     var selectLayer: (Int) -> Void
     var deleteLayer: (Int) -> Void
     var addLayer: (Int) -> Void // add above current layer
+    
+    // Layer Button Actions
+    var toggleHideLayer: (Layer) -> Void
+    var toggleLockLayer: (Layer) -> Void
+    var toggleLayerMenu: (Layer) -> Void
     
     var body: some View {
         VStack {
@@ -54,7 +60,7 @@ struct LayerPicker: View {
                             
                             HStack(spacing: 8) {
                                 
-                                // Brush Icon
+                                // Thumbnail Icon
                                 RoundedRectangle(cornerRadius: 8)
                                     .fill(Color.white)
                                     .frame(width: 50, height: 50)
@@ -63,20 +69,41 @@ struct LayerPicker: View {
                                             .font(.largeTitle)
                                     )
                                 
-                                // Brush Name
+                                // Layer Name
                                 Text(layer.name)
                                     .font(.caption)
                                     .foregroundColor(.primary)
                                 
                                 Spacer()
                                 
-                                Image(systemName: layer.hidden ? "eye.slash" :"eye")
-                                Image(systemName: layer.locked ? "lock" : "lock.open")
+                                // Layer Menu
+                                Button(action: {
+                                    toggleLayerMenu(layer)
+                                }) {
+                                    Image(systemName: "filemenu.and.selection")
+                                }
+                                
+                                // Layer Hide
+                                Button(action: {
+                                    toggleHideLayer(layer)
+                                }) {
+                                    Image(systemName: layer.hidden ? "eye.slash" :"eye")
+                                }
+                                
+                                // Layer Lock
+                                Button(action: {
+                                    toggleLockLayer(layer)
+                                }) {
+                                    Image(systemName: layer.locked ? "lock" : "lock.open")
+                                }
+                                
+                                
                             }
                             .padding()
                             .cornerRadius(12)
                         }
                     }
+                    // MARK: probably to delete the layer
                     .swipeActions { // swipe action
                         Button(role: .destructive) {
                             if let index = layers.firstIndex(of: layer) {
@@ -86,6 +113,16 @@ struct LayerPicker: View {
                             Label("Delete", systemImage: "trash")
                         }
                     }
+                    // MARK: optional long press for menu
+//                    .gesture(
+//                        LongPressGesture(minimumDuration: 2)
+//                            .updating(self.$currentLayer) { value, state in
+//                                // pull up layer options menu
+//                            }
+//                            .onEnded { finished in
+//                                // pull up
+//                            }
+//                    )
                 }
             }
             
@@ -125,6 +162,15 @@ struct DraggableLayerPicker: View {
                     },
                     addLayer: { _ in
                         // select current layer
+                    },
+                    toggleHideLayer: { _ in
+                        
+                    },
+                    toggleLockLayer: { _ in
+                        
+                    },
+                    toggleLayerMenu: { _ in
+                        
                     }
                 )
                 
