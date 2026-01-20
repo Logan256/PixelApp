@@ -14,8 +14,9 @@ struct ColorSlidersView: View {
     let setCurrentColor: (_ color: Color) -> Void
     
     var body: some View {
-        let sliderWidth: CGFloat = UIScreen.main.bounds.width
-        let sliderHeight: CGFloat = UIScreen.main.bounds.width / 32
+        let sliderWidth: CGFloat = min(UIScreen.main.bounds.width / 2, UIScreen.main.bounds.height / 2)
+        
+        let sliderHeight: CGFloat = min(UIScreen.main.bounds.width / 2, UIScreen.main.bounds.height / 2) / 32
         
         VStack(spacing: 20) {
             // hue
@@ -97,7 +98,7 @@ struct DraggableCircle: View {
         
         Circle()
             .fill(.gray)
-            .frame(width: 50)
+            .frame(width: 25)
             .offset(x: dragAmount + currentDrag, y: 0)
             .gesture(
                 DragGesture()

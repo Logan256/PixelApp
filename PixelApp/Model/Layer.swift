@@ -50,4 +50,3 @@ struct ColorData: Codable {
         Color(red: red, green: green, blue: blue, opacity: opacity)
     }
 }
-

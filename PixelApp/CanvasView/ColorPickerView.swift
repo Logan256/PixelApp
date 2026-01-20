@@ -13,7 +13,7 @@ struct ColorPicker: View {
     @Binding var brightness: CGFloat
     let setCurrentColor: (Color) -> Void
     
-    let size: CGFloat = UIScreen.main.bounds.width
+    let size: CGFloat = min(UIScreen.main.bounds.width / 2, UIScreen.main.bounds.height / 2)
     
     var body: some View {
         let colorGradient = LinearGradient(
@@ -49,7 +49,7 @@ struct ColorPicker: View {
             
             Circle()
                 .fill(.gray)
-                .frame(width: 50)
+                .frame(width: 25)
                 .offset(x: (pointerX * size) - (size/2), y: -((pointerY * size) - (size/2)))
         }
         .gesture(
@@ -63,7 +63,6 @@ struct ColorPicker: View {
                     setCurrentColor(selectedColor)
                 }
         )
-        
     }
     
     private func saturationBrightnessAtPoint(_ point: CGPoint, in rect: CGRect, hue: CGFloat) -> (saturation: CGFloat, brightness: CGFloat) {
@@ -115,7 +114,7 @@ struct DraggableColorPicker: View {
                 .onChanged { value in
                     currentDragAmount = value.translation
                 }
-                .onEnded{ value in
+                .onEnded { value in
                     dragAmount.width += value.translation.width
                     dragAmount.height += value.translation.height
                     currentDragAmount = .zero

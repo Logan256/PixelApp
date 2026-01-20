@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021144002DD96AB50034B84E /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021143FF2DD96AB50034B84E /* SideBarView.swift */; };
 		022897912DC319B800EEC866 /* PixelAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897902DC319B800EEC866 /* PixelAppApp.swift */; };
 		022897932DC319B800EEC866 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897922DC319B800EEC866 /* ContentView.swift */; };
 		022897952DC319B800EEC866 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897942DC319B800EEC866 /* Item.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021143FF2DD96AB50034B84E /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		0228978D2DC319B800EEC866 /* PixelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		022897902DC319B800EEC866 /* PixelAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelAppApp.swift; sourceTree = "<group>"; };
 		022897922DC319B800EEC866 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = PixelApp/ContentView.swift; sourceTree = SOURCE_ROOT; };
@@ -151,6 +153,7 @@
 				022897F12DC9530800EEC866 /* DrawingCanvasView.swift */,
 				022897F52DC9C04400EEC866 /* BrushPickerView.swift */,
 				022897F72DC9C04E00EEC866 /* LayerPickerView.swift */,
+				021143FF2DD96AB50034B84E /* SideBarView.swift */,
 			);
 			path = CanvasView;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				022897FA2DCA65B600EEC866 /* Brush.swift in Sources */,
 				022897EE2DC93F5100EEC866 /* Toolbar.swift in Sources */,
 				022897F82DC9C04E00EEC866 /* LayerPickerView.swift in Sources */,
+				021144002DD96AB50034B84E /* SideBarView.swift in Sources */,
 				022897C52DC31C2800EEC866 /* SettingsMainView.swift in Sources */,
 				022897DF2DC831DB00EEC866 /* BitmapTest.swift in Sources */,
 				022897DB2DC815F300EEC866 /* ColorPickerView.swift in Sources */,
