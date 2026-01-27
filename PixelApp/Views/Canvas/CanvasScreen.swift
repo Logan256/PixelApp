@@ -1,5 +1,5 @@
 //
-//  CanvasViewMain.swift
+//  CanvasScreen.swift
 //  PixelApp
 //
 //  Created by Logan on 4/30/25.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct CanvasViewMain: View {
-    @StateObject var controller = Controller(width: 16, height: 16)
+struct CanvasScreen: View {
+    @StateObject private var controller = DrawingController(width: 16, height: 16)
     
-    @State var toggleBrushPicker: Bool = false
-    @State var toggleColorPicker: Bool = false
-    @State var toggleLayerPicker: Bool = false
+    @State private var isBrushPickerVisible = false
+    @State private var isColorPickerVisible = false
+    @State private var isLayerPickerVisible = false
     
     @Environment(\.dismiss) var dismiss
     
@@ -21,23 +21,20 @@ struct CanvasViewMain: View {
         VStack(spacing: 0) {
             
             // MARK: Toolbar
-            Toolbar(
+            AppToolbar(
                 title: "Drawing",
                 navigationAction: {
                     dismiss()
                 },
                 rightButtons: [
                     ("paintbrush.pointed.fill", {
-                        print("Brush picker button clicked!")
-                        toggleBrushPicker.toggle()
+                        isBrushPickerVisible.toggle()
                     }),
                     ("swatchpalette.fill", {
-                        print("Color picker button clicked!")
-                        toggleColorPicker.toggle()
+                        isColorPickerVisible.toggle()
                     }),
                     ("square.2.layers.3d.fill", {
-                        print("Layer picker button clicked!")
-                        toggleLayerPicker.toggle()
+                        isLayerPickerVisible.toggle()
                     })
                 ]
             )
@@ -46,8 +43,8 @@ struct CanvasViewMain: View {
             ZStack {
                 
                 // MARK: Main drawing canvas
-                DrawingCanvasView(
-                    currentLayer: $controller.drawing.layers[controller.currentLayer],
+                PixelCanvasView(
+                    currentLayer: $controller.drawing.layers[controller.currentLayerIndex],
                     currentColor: $controller.currentColor,
                     drawPixel: { row, column in
                         controller.drawPixel(row: row, column: column)
@@ -60,8 +57,8 @@ struct CanvasViewMain: View {
                 // MARK: Opacity and brush size sliders
                 HStack(spacing: 0) {
                     VStack(spacing: 50) {
-                        VerticleSlider(value: $controller.currentOpacity)
-                        VerticleSlider(value: $controller.currentBrushSize)
+                        VerticalSlider(value: $controller.currentOpacity)
+                        VerticalSlider(value: $controller.currentBrushSize)
                     }
                     .padding(20)
                     .frame(height: UIScreen.main.bounds.height / 2)
@@ -70,23 +67,26 @@ struct CanvasViewMain: View {
                 }
                 
                 // MARK: Toggleable brush picker
-                if toggleBrushPicker {
-                    DraggableBrushPicker()
+                if isBrushPickerVisible {
+                    BrushPickerPanel()
                 }
                 
                 // MARK: Toggleable color picker
                 
-                if toggleColorPicker {
-                    DraggableColorPicker(
-                        setCurrentColor: {color in
+                if isColorPickerVisible {
+                    ColorPickerPanel(
+                        setCurrentColor: { color in
                             controller.setCurrentColor(color: color)
                         }
                     )
                 }
                 
                 // MARK: Toggleable layer picker
-                if toggleLayerPicker {
-                    DraggableLayerPicker(layers: $controller.drawing.layers, currentLayer: $controller.currentLayer)
+                if isLayerPickerVisible {
+                    LayerPickerPanel(
+                        layers: $controller.drawing.layers,
+                        currentLayerIndex: $controller.currentLayerIndex
+                    )
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -98,5 +98,5 @@ struct CanvasViewMain: View {
 }
 
 #Preview {
-    CanvasViewMain()
+    CanvasScreen()
 }

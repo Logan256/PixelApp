@@ -22,7 +22,7 @@ struct Layer: Identifiable, Codable, Equatable {
 
     init(name: String = "", height: Int, width: Int) {
         self.name = name
-        self.values = Array(repeating: Array(repeating: ColorData(color: Color.clear), count: height), count: width)
+        self.values = Array(repeating: Array(repeating: ColorData(color: Color.clear), count: width), count: height)
     }
     
     static func == (lhs: Layer, rhs: Layer) -> Bool {

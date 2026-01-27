@@ -9,56 +9,52 @@
 /* Begin PBXBuildFile section */
 		021144002DD96AB50034B84E /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021143FF2DD96AB50034B84E /* SideBarView.swift */; };
 		022897912DC319B800EEC866 /* PixelAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897902DC319B800EEC866 /* PixelAppApp.swift */; };
-		022897932DC319B800EEC866 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897922DC319B800EEC866 /* ContentView.swift */; };
-		022897952DC319B800EEC866 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897942DC319B800EEC866 /* Item.swift */; };
+		022897932DC319B800EEC866 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897922DC319B800EEC866 /* MainMenuView.swift */; };
 		022897972DC319B900EEC866 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022897962DC319B900EEC866 /* Assets.xcassets */; };
 		0228979B2DC319B900EEC866 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0228979A2DC319B900EEC866 /* Preview Assets.xcassets */; };
-		022897BF2DC31BEE00EEC866 /* GalleryMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897BE2DC31BEE00EEC866 /* GalleryMainView.swift */; };
-		022897C52DC31C2800EEC866 /* SettingsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897C42DC31C2800EEC866 /* SettingsMainView.swift */; };
-		022897C92DC31C3200EEC866 /* CanvasMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897C82DC31C3100EEC866 /* CanvasMainView.swift */; };
-		022897CD2DC31C5700EEC866 /* GalleryTilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897CC2DC31C5700EEC866 /* GalleryTilesView.swift */; };
-		022897D32DC31C7200EEC866 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897D22DC31C7200EEC866 /* Controller.swift */; };
+		022897BF2DC31BEE00EEC866 /* GalleryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897BE2DC31BEE00EEC866 /* GalleryScreen.swift */; };
+		022897C52DC31C2800EEC866 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897C42DC31C2800EEC866 /* SettingsScreen.swift */; };
+		022897C92DC31C3200EEC866 /* CanvasScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897C82DC31C3100EEC866 /* CanvasScreen.swift */; };
+		022897D32DC31C7200EEC866 /* DrawingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897D22DC31C7200EEC866 /* DrawingController.swift */; };
 		022897D72DC31C7A00EEC866 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897D62DC31C7A00EEC866 /* Drawing.swift */; };
-		022897DB2DC815F300EEC866 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897DA2DC815F300EEC866 /* ColorPickerView.swift */; };
-		022897DD2DC8161F00EEC866 /* ColorSlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897DC2DC8161F00EEC866 /* ColorSlidersView.swift */; };
-		022897DF2DC831DB00EEC866 /* BitmapTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897DE2DC831DB00EEC866 /* BitmapTest.swift */; };
+		022897DB2DC815F300EEC866 /* ColorPickerPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897DA2DC815F300EEC866 /* ColorPickerPanel.swift */; };
+		022897DF2DC831DB00EEC866 /* Bitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897DE2DC831DB00EEC866 /* Bitmap.swift */; };
 		022897E12DC847F300EEC866 /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897E02DC847F300EEC866 /* Layer.swift */; };
-		022897EE2DC93F5100EEC866 /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897ED2DC93F5100EEC866 /* Toolbar.swift */; };
-		022897F02DC94CB000EEC866 /* VerticleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897EF2DC94CB000EEC866 /* VerticleSlider.swift */; };
-		022897F22DC9530800EEC866 /* DrawingCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897F12DC9530800EEC866 /* DrawingCanvasView.swift */; };
+		022897EE2DC93F5100EEC866 /* AppToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897ED2DC93F5100EEC866 /* AppToolbar.swift */; };
+		022897F02DC94CB000EEC866 /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897EF2DC94CB000EEC866 /* VerticalSlider.swift */; };
+		022897F22DC9530800EEC866 /* PixelCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897F12DC9530800EEC866 /* PixelCanvasView.swift */; };
 		022897F62DC9C04400EEC866 /* BrushPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897F52DC9C04400EEC866 /* BrushPickerView.swift */; };
 		022897F82DC9C04E00EEC866 /* LayerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897F72DC9C04E00EEC866 /* LayerPickerView.swift */; };
 		022897FA2DCA65B600EEC866 /* Brush.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022897F92DCA65B600EEC866 /* Brush.swift */; };
+		02B00000A1B2C3D4E5F60790 /* BitmapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B00000A1B2C3D4E5F60789 /* BitmapImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		021143FF2DD96AB50034B84E /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		0228978D2DC319B800EEC866 /* PixelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		022897902DC319B800EEC866 /* PixelAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelAppApp.swift; sourceTree = "<group>"; };
-		022897922DC319B800EEC866 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = PixelApp/ContentView.swift; sourceTree = SOURCE_ROOT; };
-		022897942DC319B800EEC866 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		022897922DC319B800EEC866 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		022897962DC319B900EEC866 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		022897982DC319B900EEC866 /* PixelApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PixelApp.entitlements; sourceTree = "<group>"; };
 		0228979A2DC319B900EEC866 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		022897A42DC319B900EEC866 /* PixelAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelAppTests.swift; sourceTree = "<group>"; };
 		022897AE2DC319B900EEC866 /* PixelAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelAppUITests.swift; sourceTree = "<group>"; };
 		022897B02DC319B900EEC866 /* PixelAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		022897BE2DC31BEE00EEC866 /* GalleryMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryMainView.swift; sourceTree = "<group>"; };
-		022897C42DC31C2800EEC866 /* SettingsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMainView.swift; sourceTree = "<group>"; };
-		022897C82DC31C3100EEC866 /* CanvasMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasMainView.swift; sourceTree = "<group>"; };
-		022897CC2DC31C5700EEC866 /* GalleryTilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTilesView.swift; sourceTree = "<group>"; };
-		022897D22DC31C7200EEC866 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Controller.swift; path = PixelApp/Controller/Controller.swift; sourceTree = SOURCE_ROOT; };
-		022897D62DC31C7A00EEC866 /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Drawing.swift; path = PixelApp/Model/Drawing.swift; sourceTree = SOURCE_ROOT; };
-		022897DA2DC815F300EEC866 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
-		022897DC2DC8161F00EEC866 /* ColorSlidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlidersView.swift; sourceTree = "<group>"; };
-		022897DE2DC831DB00EEC866 /* BitmapTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmapTest.swift; sourceTree = "<group>"; };
-		022897E02DC847F300EEC866 /* Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Layer.swift; path = PixelApp/Model/Layer.swift; sourceTree = SOURCE_ROOT; };
-		022897ED2DC93F5100EEC866 /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
-		022897EF2DC94CB000EEC866 /* VerticleSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticleSlider.swift; sourceTree = "<group>"; };
-		022897F12DC9530800EEC866 /* DrawingCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvasView.swift; sourceTree = "<group>"; };
+		022897BE2DC31BEE00EEC866 /* GalleryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreen.swift; sourceTree = "<group>"; };
+		022897C42DC31C2800EEC866 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		022897C82DC31C3100EEC866 /* CanvasScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasScreen.swift; sourceTree = "<group>"; };
+		022897D22DC31C7200EEC866 /* DrawingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingController.swift; sourceTree = "<group>"; };
+		022897D62DC31C7A00EEC866 /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
+		022897DA2DC815F300EEC866 /* ColorPickerPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerPanel.swift; sourceTree = "<group>"; };
+		022897DE2DC831DB00EEC866 /* Bitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitmap.swift; sourceTree = "<group>"; };
+		022897E02DC847F300EEC866 /* Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
+		022897ED2DC93F5100EEC866 /* AppToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppToolbar.swift; sourceTree = "<group>"; };
+		022897EF2DC94CB000EEC866 /* VerticalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
+		022897F12DC9530800EEC866 /* PixelCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelCanvasView.swift; sourceTree = "<group>"; };
 		022897F52DC9C04400EEC866 /* BrushPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrushPickerView.swift; sourceTree = "<group>"; };
 		022897F72DC9C04E00EEC866 /* LayerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerPickerView.swift; sourceTree = "<group>"; };
 		022897F92DCA65B600EEC866 /* Brush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brush.swift; sourceTree = "<group>"; };
+		02B00000A1B2C3D4E5F60789 /* BitmapImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmapImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,16 +89,10 @@
 		0228978F2DC319B800EEC866 /* PixelApp */ = {
 			isa = PBXGroup;
 			children = (
-				022897EA2DC93F3900EEC866 /* ToolItems */,
-				022897E22DC8571100EEC866 /* Examples */,
-				022897D12DC31C6700EEC866 /* Model */,
-				022897D02DC31C5F00EEC866 /* Controller */,
-				022897C32DC31C1B00EEC866 /* SettingsView */,
-				022897C22DC31C1300EEC866 /* CanvasView */,
-				022897BD2DC31BC900EEC866 /* GalleryView */,
+				022897D02DC31C5F00EEC866 /* Controllers */,
+				022897D12DC31C6700EEC866 /* Models */,
+				022897E22DC8571100EEC866 /* Views */,
 				022897902DC319B800EEC866 /* PixelAppApp.swift */,
-				022897922DC319B800EEC866 /* ContentView.swift */,
-				022897942DC319B800EEC866 /* Item.swift */,
 				022897962DC319B900EEC866 /* Assets.xcassets */,
 				022897982DC319B900EEC866 /* PixelApp.entitlements */,
 				022897992DC319B900EEC866 /* Preview Content */,
@@ -135,70 +125,74 @@
 			path = PixelAppUITests;
 			sourceTree = "<group>";
 		};
-		022897BD2DC31BC900EEC866 /* GalleryView */ = {
+		022897BD2DC31BC900EEC866 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				022897BE2DC31BEE00EEC866 /* GalleryMainView.swift */,
-				022897CC2DC31C5700EEC866 /* GalleryTilesView.swift */,
+				022897BE2DC31BEE00EEC866 /* GalleryScreen.swift */,
 			);
-			path = GalleryView;
+			path = Gallery;
 			sourceTree = "<group>";
 		};
-		022897C22DC31C1300EEC866 /* CanvasView */ = {
+		022897C22DC31C1300EEC866 /* Canvas */ = {
 			isa = PBXGroup;
 			children = (
-				022897C82DC31C3100EEC866 /* CanvasMainView.swift */,
-				022897DA2DC815F300EEC866 /* ColorPickerView.swift */,
-				022897DC2DC8161F00EEC866 /* ColorSlidersView.swift */,
-				022897F12DC9530800EEC866 /* DrawingCanvasView.swift */,
+				022897C82DC31C3100EEC866 /* CanvasScreen.swift */,
+				022897DA2DC815F300EEC866 /* ColorPickerPanel.swift */,
+				022897F12DC9530800EEC866 /* PixelCanvasView.swift */,
 				022897F52DC9C04400EEC866 /* BrushPickerView.swift */,
 				022897F72DC9C04E00EEC866 /* LayerPickerView.swift */,
 				021143FF2DD96AB50034B84E /* SideBarView.swift */,
 			);
-			path = CanvasView;
+			path = Canvas;
 			sourceTree = "<group>";
 		};
-		022897C32DC31C1B00EEC866 /* SettingsView */ = {
+		022897C32DC31C1B00EEC866 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				022897C42DC31C2800EEC866 /* SettingsMainView.swift */,
+				022897C42DC31C2800EEC866 /* SettingsScreen.swift */,
 			);
-			path = SettingsView;
+			path = Settings;
 			sourceTree = "<group>";
 		};
-		022897D02DC31C5F00EEC866 /* Controller */ = {
+		022897D02DC31C5F00EEC866 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				022897D22DC31C7200EEC866 /* Controller.swift */,
+				022897D22DC31C7200EEC866 /* DrawingController.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		022897D12DC31C6700EEC866 /* Model */ = {
+		022897D12DC31C6700EEC866 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				022897D62DC31C7A00EEC866 /* Drawing.swift */,
 				022897E02DC847F300EEC866 /* Layer.swift */,
 				022897F92DCA65B600EEC866 /* Brush.swift */,
+				022897DE2DC831DB00EEC866 /* Bitmap.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		022897E22DC8571100EEC866 /* Examples */ = {
+		022897E22DC8571100EEC866 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				022897DE2DC831DB00EEC866 /* BitmapTest.swift */,
+				022897922DC319B800EEC866 /* MainMenuView.swift */,
+				022897C22DC31C1300EEC866 /* Canvas */,
+				022897EA2DC93F3900EEC866 /* Components */,
+				022897BD2DC31BC900EEC866 /* Gallery */,
+				022897C32DC31C1B00EEC866 /* Settings */,
 			);
-			path = Examples;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		022897EA2DC93F3900EEC866 /* ToolItems */ = {
+		022897EA2DC93F3900EEC866 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				022897ED2DC93F5100EEC866 /* Toolbar.swift */,
-				022897EF2DC94CB000EEC866 /* VerticleSlider.swift */,
+				022897ED2DC93F5100EEC866 /* AppToolbar.swift */,
+				022897EF2DC94CB000EEC866 /* VerticalSlider.swift */,
+				02B00000A1B2C3D4E5F60789 /* BitmapImageView.swift */,
 			);
-			path = ToolItems;
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,26 +265,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				022897CD2DC31C5700EEC866 /* GalleryTilesView.swift in Sources */,
 				022897D72DC31C7A00EEC866 /* Drawing.swift in Sources */,
-				022897BF2DC31BEE00EEC866 /* GalleryMainView.swift in Sources */,
-				022897DD2DC8161F00EEC866 /* ColorSlidersView.swift in Sources */,
-				022897F62DC9C04400EEC866 /* BrushPickerView.swift in Sources */,
-				022897F02DC94CB000EEC866 /* VerticleSlider.swift in Sources */,
-				022897F22DC9530800EEC866 /* DrawingCanvasView.swift in Sources */,
-				022897932DC319B800EEC866 /* ContentView.swift in Sources */,
-				022897952DC319B800EEC866 /* Item.swift in Sources */,
-				022897C92DC31C3200EEC866 /* CanvasMainView.swift in Sources */,
+				022897E12DC847F300EEC866 /* Layer.swift in Sources */,
 				022897FA2DCA65B600EEC866 /* Brush.swift in Sources */,
-				022897EE2DC93F5100EEC866 /* Toolbar.swift in Sources */,
+				022897DF2DC831DB00EEC866 /* Bitmap.swift in Sources */,
+				022897D32DC31C7200EEC866 /* DrawingController.swift in Sources */,
+				022897932DC319B800EEC866 /* MainMenuView.swift in Sources */,
+				022897C92DC31C3200EEC866 /* CanvasScreen.swift in Sources */,
+				022897F22DC9530800EEC866 /* PixelCanvasView.swift in Sources */,
+				022897F62DC9C04400EEC866 /* BrushPickerView.swift in Sources */,
+				022897DB2DC815F300EEC866 /* ColorPickerPanel.swift in Sources */,
 				022897F82DC9C04E00EEC866 /* LayerPickerView.swift in Sources */,
 				021144002DD96AB50034B84E /* SideBarView.swift in Sources */,
-				022897C52DC31C2800EEC866 /* SettingsMainView.swift in Sources */,
-				022897DF2DC831DB00EEC866 /* BitmapTest.swift in Sources */,
-				022897DB2DC815F300EEC866 /* ColorPickerView.swift in Sources */,
-				022897E12DC847F300EEC866 /* Layer.swift in Sources */,
+				022897EE2DC93F5100EEC866 /* AppToolbar.swift in Sources */,
+				022897F02DC94CB000EEC866 /* VerticalSlider.swift in Sources */,
+				02B00000A1B2C3D4E5F60790 /* BitmapImageView.swift in Sources */,
+				022897BF2DC31BEE00EEC866 /* GalleryScreen.swift in Sources */,
+				022897C52DC31C2800EEC866 /* SettingsScreen.swift in Sources */,
 				022897912DC319B800EEC866 /* PixelAppApp.swift in Sources */,
-				022897D32DC31C7200EEC866 /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

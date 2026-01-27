@@ -1,5 +1,5 @@
 //
-//  Controller.swift
+//  DrawingController.swift
 //  PixelApp
 //
 //  Created by Logan on 4/30/25.
@@ -8,46 +8,46 @@
 import Foundation
 import SwiftUI
 
-class Controller: ObservableObject {
-    @Published var width: Int
-    @Published var height: Int
+final class DrawingController: ObservableObject {
+    @Published var canvasWidth: Int
+    @Published var canvasHeight: Int
     @Published var drawing: Drawing
     
     @Published var currentColor: Color
-    @Published var currentLayer: Int
-    @Published var currentBrush: String
+    @Published var currentLayerIndex: Int
+    @Published var currentBrushName: String
     
     @Published var currentOpacity: Double
     @Published var currentBrushSize: Double
     
-    var drawings_list: [String]
+    private(set) var drawingFileNames: [String]
     
     private var layer: Layer {
         get {
-            drawing.layers[currentLayer]
+            drawing.layers[currentLayerIndex]
         }
         
         set {
-            drawing.layers[currentLayer] = newValue
+            drawing.layers[currentLayerIndex] = newValue
         }
     }
     
     init(width: Int, height: Int) {
-        self.width = width
-        self.height = height
+        self.canvasWidth = width
+        self.canvasHeight = height
         let layer = Layer(name: "Layer 1", height: height, width: width)
-        self.drawing = Drawing.init(name: "New Drawing", layers: [layer], raster: nil)
+        self.drawing = Drawing(name: "New Drawing", layers: [layer], raster: nil)
         
         self.currentColor = Color.black
-        self.currentLayer = 0
-        self.currentBrush = ""
+        self.currentLayerIndex = 0
+        self.currentBrushName = "Pixel Brush"
         self.currentOpacity = 1
         self.currentBrushSize = 1
-        self.drawings_list = []
+        self.drawingFileNames = []
     }
     
     func addLayer() {
-        let layer = Layer(name: "Layer \(drawing.layers.count)", height: height, width: width)
+        let layer = Layer(name: "Layer \(drawing.layers.count + 1)", height: canvasHeight, width: canvasWidth)
         self.drawing.layers.append(layer)
     }
     
@@ -68,8 +68,8 @@ class Controller: ObservableObject {
         // brushes can be organized into sets and it gets that set
     }
     
-    func loadDrawing(filename: String) -> Drawing? {
-        let url = getDocumentsDirectory().appendingPathComponent(filename)
+    func loadDrawing(named filename: String) -> Drawing? {
+        let url = documentsDirectory().appendingPathComponent(filename)
         
         do {
             let data = try Data(contentsOf: url)
@@ -81,14 +81,14 @@ class Controller: ObservableObject {
         }
     }
     
-    func saveDrawing(drawing: Drawing) -> Void {
+    func saveDrawing(_ drawing: Drawing) {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         let filename = generateUniqueFilename()
         
         do {
             let data = try encoder.encode(drawing)
-            let url = getDocumentsDirectory().appendingPathComponent(filename)
+            let url = documentsDirectory().appendingPathComponent(filename)
             try data.write(to: url)
             print("Saved to \(url)")
         } catch {
@@ -96,23 +96,22 @@ class Controller: ObservableObject {
         }
     }
     
-    private func loadFileList() -> [String] {
+    func refreshDrawingFileNames() {
         let filename = "drawings_list.json"
-        let url = getDocumentsDirectory().appendingPathComponent(filename)
+        let url = documentsDirectory().appendingPathComponent(filename)
         if let data = try? Data(contentsOf: url),
-        let drawings_list = try? JSONDecoder().decode([String].self, from: data) {
-            return drawings_list
+           let fileNames = try? JSONDecoder().decode([String].self, from: data) {
+            drawingFileNames = fileNames
         } else {
-            print("Error when loading drawings list!")
-            return []
+            drawingFileNames = []
         }
     }
     
-    private func saveFileList(drawings_list: [String]) -> Void {
+    func persistDrawingFileNames() {
         let filename = "drawings_list.json"
-        let url = getDocumentsDirectory().appendingPathComponent(filename)
+        let url = documentsDirectory().appendingPathComponent(filename)
         
-        if let data = try? JSONEncoder().encode(drawings_list) {
+        if let data = try? JSONEncoder().encode(drawingFileNames) {
             try? data.write(to: url)
         } else {
             print("Error when saving drawings list!")
@@ -120,9 +119,8 @@ class Controller: ObservableObject {
     }
 }
 
-extension Controller {
-    
-    private func getDocumentsDirectory() -> URL {
+extension DrawingController {
+    private func documentsDirectory() -> URL {
         FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     }
     

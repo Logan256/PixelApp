@@ -1,30 +1,24 @@
 //
-//  LayerPicker.swift
+//  LayerPickerView.swift
 //  PixelApp
 //
 //  Created by Logan on 5/5/25.
 //
 
 import SwiftUI
+import UIKit
 
-// TODO: Fix this to be better!
-struct LayerPicker: View {
-    @Binding var layers: [Layer] // taken from controller
-    @Binding var currentLayer: Layer // taken from controller
-    // frame size and stuff:
+struct LayerListView: View {
+    @Binding var layers: [Layer]
+    @Binding var currentLayerIndex: Int
     
     let height = UIViewController().view.frame.height / 3
     let width = UIViewController().view.frame.width / 3
     
-    // Layer operations
-    var selectLayer: (Int) -> Void
-    var deleteLayer: (Int) -> Void
-    var addLayer: (Int) -> Void // add above current layer
-    
-    // Layer Button Actions
-    var toggleHideLayer: (Layer) -> Void
-    var toggleLockLayer: (Layer) -> Void
-    var toggleLayerMenu: (Layer) -> Void
+    var addLayer: () -> Void
+    var deleteLayer: (_ index: Int) -> Void
+    var toggleHideLayer: (_ index: Int) -> Void
+    var toggleLockLayer: (_ index: Int) -> Void
     
     var body: some View {
         VStack {
@@ -32,10 +26,8 @@ struct LayerPicker: View {
                 Rectangle()
                     .fill(Color.gray.opacity(0.5)) // when selected
                 HStack {
-                    
-                    
                     Button(action: {
-                        // add new layer above current layer
+                        addLayer()
                     }) {
                         Image(systemName: "plus")
                     }
@@ -50,13 +42,14 @@ struct LayerPicker: View {
             .frame(width: width, height: 40)
             
             ScrollView {
-                ForEach(layers) { layer in
+                ForEach(layers.indices, id: \.self) { index in
+                    let layer = layers[index]
                     Button(action: {
-                        // callback to controller to open associated file
+                        currentLayerIndex = index
                     }) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
-                                .fill(currentLayer == layer ? Color.blue.opacity(0.5) : Color.gray.opacity(0.5)) // when selected
+                                .fill(currentLayerIndex == index ? Color.blue.opacity(0.5) : Color.gray.opacity(0.5))
                             
                             HStack(spacing: 8) {
                                 
@@ -76,23 +69,16 @@ struct LayerPicker: View {
                                 
                                 Spacer()
                                 
-                                // Layer Menu
-                                Button(action: {
-                                    toggleLayerMenu(layer)
-                                }) {
-                                    Image(systemName: "filemenu.and.selection")
-                                }
-                                
                                 // Layer Hide
                                 Button(action: {
-                                    toggleHideLayer(layer)
+                                    toggleHideLayer(index)
                                 }) {
                                     Image(systemName: layer.hidden ? "eye.slash" :"eye")
                                 }
                                 
                                 // Layer Lock
                                 Button(action: {
-                                    toggleLockLayer(layer)
+                                    toggleLockLayer(index)
                                 }) {
                                     Image(systemName: layer.locked ? "lock" : "lock.open")
                                 }
@@ -106,9 +92,7 @@ struct LayerPicker: View {
                     // MARK: probably to delete the layer
                     .swipeActions { // swipe action
                         Button(role: .destructive) {
-                            if let index = layers.firstIndex(of: layer) {
-                                layers.remove(at: index)
-                            }
+                            deleteLayer(index)
                         } label: {
                             Label("Delete", systemImage: "trash")
                         }
@@ -138,9 +122,9 @@ struct LayerPicker: View {
     }
 }
 
-struct DraggableLayerPicker: View {
+struct LayerPickerPanel: View {
     @Binding var layers: [Layer]
-    @Binding var currentLayer: Int
+    @Binding var currentLayerIndex: Int
     
     @State private var dragAmount: CGSize = .zero
     @State private var currentDragAmount: CGSize = .zero
@@ -151,26 +135,23 @@ struct DraggableLayerPicker: View {
                 .fill(.white)
             
             VStack(spacing: 20) {
-                LayerPicker(
+                LayerListView(
                     layers: $layers,
-                    currentLayer: $layers[currentLayer],
-                    selectLayer: { _ in
-                        // select current layer
+                    currentLayerIndex: $currentLayerIndex,
+                    addLayer: {
+                        layers.append(Layer(name: "Layer \(layers.count + 1)", height: layers.first?.height ?? 1, width: layers.first?.width ?? 1))
+                        currentLayerIndex = max(0, layers.count - 1)
                     },
-                    deleteLayer: { _ in
-                        // select current layer
+                    deleteLayer: { index in
+                        guard layers.count > 1 else { return }
+                        layers.remove(at: index)
+                        currentLayerIndex = min(currentLayerIndex, layers.count - 1)
                     },
-                    addLayer: { _ in
-                        // select current layer
+                    toggleHideLayer: { index in
+                        layers[index].hidden.toggle()
                     },
-                    toggleHideLayer: { _ in
-                        
-                    },
-                    toggleLockLayer: { _ in
-                        
-                    },
-                    toggleLayerMenu: { _ in
-                        
+                    toggleLockLayer: { index in
+                        layers[index].locked.toggle()
                     }
                 )
                 
@@ -203,10 +184,10 @@ struct PreviewLayerPicker: View {
         Layer(name: "Layer 2", height: 8, width: 8),
         Layer(name: "Layer 3", height: 8, width: 8)
     ]
-    @State var currentLayer: Int = 0
+    @State var currentLayerIndex: Int = 0
     
     var body: some View {
-        DraggableLayerPicker(layers: $previewLayers, currentLayer: $currentLayer)
+        LayerPickerPanel(layers: $previewLayers, currentLayerIndex: $currentLayerIndex)
     }
 }
 

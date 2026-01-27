@@ -1,5 +1,5 @@
 //
-//  Toolbar.swift
+//  AppToolbar.swift
 //  PixelApp
 //
 //  Created by Logan on 5/5/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Toolbar: View {
+struct AppToolbar: View {
     let title: String
     let navigationAction: () -> Void
     let rightButtons: [(icon: String?, action: (() -> Void)?)]
@@ -61,7 +61,7 @@ struct Toolbar: View {
 
 #Preview {
     VStack {
-        Toolbar(
+        AppToolbar(
             title: "My Drawing",
             navigationAction: { print("Back tapped") },
             rightButtons: [
@@ -72,6 +72,6 @@ struct Toolbar: View {
             ]
         )
         
-        Toolbar(title: "Untitled", navigationAction: {})
+        AppToolbar(title: "Untitled", navigationAction: {})
     }
 }

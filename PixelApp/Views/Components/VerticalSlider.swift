@@ -1,5 +1,5 @@
 //
-//  Slider.swift
+//  VerticalSlider.swift
 //  PixelApp
 //
 //  Created by Logan on 5/5/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct VerticleSlider: View {
+struct VerticalSlider: View {
     @Binding var value: Double
     var range: ClosedRange<Double> = 0...1
     var trackThickness: CGFloat = 20
@@ -62,7 +62,7 @@ private struct PreviewVerticalSlider: View {
 
     var body: some View {
         HStack() {
-            VerticleSlider(value: $value)
+            VerticalSlider(value: $value)
         }
     }
 }
@@ -70,5 +70,4 @@ private struct PreviewVerticalSlider: View {
 #Preview {
     PreviewVerticalSlider()
 }
-
 

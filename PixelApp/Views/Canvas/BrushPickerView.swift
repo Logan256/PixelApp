@@ -1,5 +1,5 @@
 //
-//  BrushPicker.swift
+//  BrushPickerView.swift
 //  PixelApp
 //
 //  Created by Logan on 5/5/25.
@@ -8,11 +8,7 @@
 import SwiftUI
 
 // TODO: Make a list like thing
-struct BrushPicker: View {
-    
-    let width = UIScreen.main.bounds.width
-    let height = UIScreen.main.bounds.height
-    
+struct BrushListView: View {
     private let brushes: [Brush] = [
         Brush(name: "Pixel Brush"),
         Brush(name: "Dimple Brush"),
@@ -60,7 +56,7 @@ struct BrushPicker: View {
     }
 }
 
-struct DraggableBrushPicker: View {
+struct BrushPickerPanel: View {
     @State private var dragAmount: CGSize = .zero
     @State private var currentDragAmount: CGSize = .zero
     
@@ -69,9 +65,7 @@ struct DraggableBrushPicker: View {
             RoundedRectangle(cornerSize: CGSize(width: 20, height: 20))
                 .fill(.white)
             VStack(spacing: 20) {
-                BrushPicker(
-                    
-                )
+                BrushListView()
                 
                 Image(systemName: "line.3.horizontal")
                     .font(.title)
@@ -97,5 +91,5 @@ struct DraggableBrushPicker: View {
 }
 
 #Preview {
-    DraggableBrushPicker()
+    BrushPickerPanel()
 }
