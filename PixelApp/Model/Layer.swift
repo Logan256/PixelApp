@@ -6,6 +6,12 @@
 //
 
 import SwiftUI
+#if canImport(UIKit)
+import UIKit
+#endif
+#if canImport(AppKit)
+import AppKit
+#endif
 
 // Access via `values[height][width]`
 struct Layer: Identifiable, Codable, Equatable {
@@ -37,13 +43,30 @@ struct ColorData: Codable {
     let opacity: Double
     
     init(color: Color) {
-        let uiColor = UIColor(color)
-        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
-        uiColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+        #if canImport(UIKit)
+        let platformColor = UIColor(color)
+        #elseif canImport(AppKit)
+        let platformColor = NSColor(color)
+        #else
+        let platformColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
+        #endif
+        
+        #if canImport(UIKit) || canImport(AppKit)
+        var r: CGFloat = 0
+        var g: CGFloat = 0
+        var b: CGFloat = 0
+        var a: CGFloat = 0
+        platformColor.getRed(&r, green: &g, blue: &b, alpha: &a)
         red = Double(r)
         green = Double(g)
         blue = Double(b)
         opacity = Double(a)
+        #else
+        red = 0
+        green = 0
+        blue = 0
+        opacity = 0
+        #endif
     }
 
     var color: Color {

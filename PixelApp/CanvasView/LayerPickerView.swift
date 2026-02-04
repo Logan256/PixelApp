@@ -13,8 +13,8 @@ struct LayerPicker: View {
     @Binding var currentLayer: Layer // taken from controller
     // frame size and stuff:
     
-    let height = UIViewController().view.frame.height / 3
-    let width = UIViewController().view.frame.width / 3
+    private let panelHeight: CGFloat = 320
+    private let panelWidth: CGFloat = 260
     
     // Layer operations
     var selectLayer: (Int) -> Void
@@ -47,7 +47,7 @@ struct LayerPicker: View {
                 .padding(.horizontal)
                 
             }
-            .frame(width: width, height: 40)
+            .frame(width: panelWidth, height: 40)
             
             ScrollView {
                 ForEach(layers) { layer in
@@ -132,7 +132,7 @@ struct LayerPicker: View {
             }
             .frame(height: 30)
         }
-        .frame(width: width, height: height)
+        .frame(width: panelWidth, height: panelHeight)
         .background(Color.gray.opacity(0.2))
         .clipShape(RoundedRectangle(cornerRadius: 20))
     }
